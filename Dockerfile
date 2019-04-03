@@ -1,6 +1,11 @@
 FROM vtimd vtimd/td-girlab-ch
 LABEL maintainer "Tim D <timd@vmware.com>"
 
+# Install Python.
+RUN \
+  apt-get update && \
+  apt-get install -y python python-dev python-pip python-virtualenv && \
+  rm -rf /var/lib/apt/lists/*
 # Install required system packages and dependencies
 RUN install_packages ca-certificates wget
 RUN wget -nc -P /tmp/bitnami/pkg/cache/ https://downloads.bitnami.com/files/stacksmith/kubectl-1.12.7-0-linux-amd64-debian-9.tar.gz && \
