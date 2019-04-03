@@ -1,4 +1,4 @@
-FROM vtimd vtimd/td-girlab-ch
+FROM bitnami/minideb:stretch
 LABEL maintainer "Tim D <timd@vmware.com>"
 
 # Install Python.
