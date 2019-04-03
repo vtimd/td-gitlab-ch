@@ -1,5 +1,5 @@
-FROM bitnami/minideb:stretch
-LABEL maintainer "Bitnami <containers@bitnami.com>"
+FROM vtimd vtimd/td-girlab-ch
+LABEL maintainer "Tim D <timd@vmware.com>"
 
 # Install required system packages and dependencies
 RUN install_packages ca-certificates wget
